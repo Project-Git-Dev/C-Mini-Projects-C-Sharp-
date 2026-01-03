@@ -1,0 +1,59 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace Giraffe
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Enter a number: ");
+            if (!double.TryParse(Console.ReadLine(), out double a))
+            {
+                Console.WriteLine("Invalid number");
+                return;
+            }
+
+            Console.Write("Enter a operator(+ - / *): ");
+            string op = Console.ReadLine();
+
+            Console.Write("Enter another number: ");
+            if (!double.TryParse(Console.ReadLine(), out double b))
+            {
+                Console.WriteLine("Invalid number");
+                return;
+            }
+
+
+
+
+            switch (op)
+            {
+                case "+": Console.WriteLine(a + b); break;
+                case "-": Console.WriteLine(a - b); break;
+                case "/":
+                    if (b == 0)
+                    {
+                        Console.WriteLine("You cannot divide by zero! ");
+                    }
+                    else
+                    {
+                        Console.WriteLine(a / b);
+                    }
+                    break;
+                case "*": Console.WriteLine(a * b); break;
+                default: Console.WriteLine("Ivalid operator! "); break;
+            }
+
+
+            Console.ReadLine();
+        }
+
+        
+    }
+}
