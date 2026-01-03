@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics.Eventing.Reader;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+using System;
 
 namespace Giraffe
 {
@@ -20,7 +14,7 @@ namespace Giraffe
             }
 
             Console.Write("Enter a operator(+ - / *): ");
-            string op = Console.ReadLine();
+            char op = Console.ReadKey().KeyChar;
 
             Console.Write("Enter another number: ");
             if (!double.TryParse(Console.ReadLine(), out double b))
@@ -34,9 +28,9 @@ namespace Giraffe
 
             switch (op)
             {
-                case "+": Console.WriteLine(a + b); break;
-                case "-": Console.WriteLine(a - b); break;
-                case "/":
+                case '+': Console.WriteLine(a + b); break;
+                case '-': Console.WriteLine(a - b); break;
+                case '/':
                     if (b == 0)
                     {
                         Console.WriteLine("You cannot divide by zero! ");
@@ -46,7 +40,7 @@ namespace Giraffe
                         Console.WriteLine(a / b);
                     }
                     break;
-                case "*": Console.WriteLine(a * b); break;
+                case '*': Console.WriteLine(a * b); break;
                 default: Console.WriteLine("Ivalid operator! "); break;
             }
 
