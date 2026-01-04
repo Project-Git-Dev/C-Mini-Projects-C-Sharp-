@@ -41,13 +41,10 @@ namespace Giraffe
                     }
                     break;
                 case '*': Console.WriteLine(a * b); break;
-                default: Console.WriteLine("Ivalid operator! "); break;
+            
             }
-
-
             Console.ReadLine();
         }
-
-        
     }
 }
+
