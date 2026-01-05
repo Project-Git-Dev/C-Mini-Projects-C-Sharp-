@@ -27,7 +27,7 @@ namespace Giraffe
             }
 
             Console.Write("Enter a number: ");
-            if (!double.TryParse(Console.ReadLine(), out int b))
+            if (!double.TryParse(Console.ReadLine(), out double b))
             {
                 Console.WriteLine("Invalid number, Please pick a number");
                 return;
@@ -63,3 +63,4 @@ namespace Giraffe
         }
     }
 }
+
