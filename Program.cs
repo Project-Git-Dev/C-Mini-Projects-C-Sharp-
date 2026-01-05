@@ -7,7 +7,7 @@ namespace Giraffe
         static void Main(string[] args)
         {
             Console.Write("Enter a number: ");
-            if (!int.TryParse(Console.ReadLine(), out int a))
+            if (!double.TryParse(Console.ReadLine(), out double a))
             {
                 Console.WriteLine("Invalid number, Please pick a number");
                 return;
@@ -27,7 +27,7 @@ namespace Giraffe
             }
 
             Console.Write("Enter a number: ");
-            if (!int.TryParse(Console.ReadLine(), out int b))
+            if (!double.TryParse(Console.ReadLine(), out int b))
             {
                 Console.WriteLine("Invalid number, Please pick a number");
                 return;
@@ -46,10 +46,14 @@ namespace Giraffe
                     break;
                 case '/':
                     if (b == 0)
+                    {
                         Console.WriteLine("You cannot divide by zero!");
+                    }
                     else
+                    {
                         Console.WriteLine((double)a / b);
-                    break;
+                    }
+                        break;
                 default:
                     Console.WriteLine("Invalid operator");
                     break;
