@@ -54,13 +54,11 @@ namespace Giraffe
                         Console.WriteLine((double)a / b);
                     }
                         break;
-                default:
-                    Console.WriteLine("Invalid operator");
-                    break;
             }
 
             Console.ReadLine();
         }
     }
 }
+
 
