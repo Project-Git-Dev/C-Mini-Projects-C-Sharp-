@@ -51,7 +51,7 @@ namespace Giraffe
                     }
                     else
                     {
-                        Console.WriteLine((double)a / b);
+                        Console.WriteLine(a / b);
                     }
                         break;
             }
@@ -60,5 +60,6 @@ namespace Giraffe
         }
     }
 }
+
 
 
